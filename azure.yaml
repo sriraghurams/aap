@@ -1,0 +1,7 @@
+ - hosts: localhost
+   tasks:
+    - name: Get facts for all resource groups
+      azure.azcollection.azure_rm_resourcegroup_info:
+      register: group_array
+    - debug:
+        var: group_array
