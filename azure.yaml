@@ -3,7 +3,8 @@
     - name: Install dependencies
       local_action:
         module: pip
-        requirements: requirements.txt
+        name:
+          
       delegate_to: localhost
     - name: Get facts for all resource groups
       azure.azcollection.azure_rm_resourcegroup_info:
